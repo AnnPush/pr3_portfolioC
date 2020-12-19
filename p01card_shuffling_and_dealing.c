@@ -11,20 +11,20 @@
 void shuffle(unsigned int wDeck[][FACES]);
 //раздать карты игрокам
 void deal(unsigned int wDeck[][FACES], unsigned int wPlayer[][2], unsigned int *wStart,  unsigned int *wFinish);
+//распечатать карты игрока
+void printArray(unsigned int wPlayer[][2], const char *wFace[], const char *wSuit[], unsigned int pd);
 //определение приоритета карт игроков
 int fPriority(unsigned int wPlayer[][2], unsigned int *nominal);
 //сортировка карт, которые находятся на руках у каждого игрока
-void  sort(unsigned int wPlayer[][2]);
-//распечатать карты игрока
-void printArray(unsigned int wPlayer[][2], const char *wFace[], const char *wSuit[], unsigned int pd);
-//сколько еще взять карт
-void takeCards(unsigned int *prioritet, unsigned int *takeCard);
+void sort(unsigned int wPlayer[][2]);
 //функция, обменивающая карты в ячейках
 void swap(unsigned int * element1Ptr, unsigned int * element2Ptr);
-//оценка карт игроков
-void mark(unsigned int wPlayer1[][2], unsigned int wPlayer2[][2], unsigned int *nominal1, unsigned int *nominal2, unsigned int *p1, unsigned int *p2);
+//сколько еще взять карт
+void takeCards(unsigned int *prioritet, unsigned int *takeCard);
 //передвинуть карты с комбинацией в конец массива
 void sortTakeCards(unsigned int wPlayer[][2], unsigned int *prioritet, unsigned int *takeCard, unsigned int *nominal);
+//оценка карт игроков
+void mark(unsigned int wPlayer1[][2], unsigned int wPlayer2[][2], unsigned int *nominal1, unsigned int *nominal2, unsigned int *p1, unsigned int *p2);
 
 int main(void)
 {   
