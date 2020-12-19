@@ -28,37 +28,37 @@ void mark(unsigned int wPlayer1[][2], unsigned int wPlayer2[][2], unsigned int *
 
 int main(void)
 {   
-    unsigned int deck[SUITS][FACES] = {0};//инициализировать массив колоды карт
+      unsigned int deck[SUITS][FACES] = {0};//инициализировать массив колоды карт
 
-	unsigned int player1[5][2];//карты на руках у первого игрока
-	unsigned int player2[5][2];//карты на руках у второго игрока
+      unsigned int player1[5][2];//карты на руках у первого игрока
+      unsigned int player2[5][2];//карты на руках у второго игрока
 	
-	unsigned int pl_dl = 0;//если дилер - 1, если игрок - 0  
+      unsigned int pl_dl = 0;//если дилер - 1, если игрок - 0  
 	
-	unsigned int nominal1;//сумма номиналов карт первого игрока
-    unsigned int nominal2;//сумма номиналов карт второго игрока
+      unsigned int nominal1;//сумма номиналов карт первого игрока
+      unsigned int nominal2;//сумма номиналов карт второго игрока
 	
-	unsigned int start = 1;//с какой карты начинается раздача карт
-	unsigned int finish = 5; //какая карта последняя при раздаче карт
+      unsigned int start = 1;//с какой карты начинается раздача карт
+      unsigned int finish = 5; //какая карта последняя при раздаче карт
 	
-	unsigned int p1, p2;//приоритет 1 и 2 игрока
+      unsigned int p1, p2;//приоритет 1 и 2 игрока
 	
-	srand(time(NULL)); 
-    shuffle(deck);//перетасовать карты
+      srand(time(NULL)); 
+      shuffle(deck);//перетасовать карты
 
-    // инициализация массива мастей
-    const char *suit[SUITS] = {"Hearts", "Diamonds", "Clubs", "Spades"};
+      // инициализация массива мастей
+      const char *suit[SUITS] = {"Hearts", "Diamonds", "Clubs", "Spades"};
 	
-	// инициализация массива номиналов(значений)
-    const char *face[FACES] = {"Ace", "Deuce", "Three", "Four",
+      // инициализация массива номиналов(значений)
+      const char *face[FACES] = {"Ace", "Deuce", "Three", "Four",
                                 "Five", "Six", "Seven", "Eight",
                                 "Nine", "Ten", "Jack", "Queen", "King"};
 	
-    //сдать карты первому игроку
-    printf("\nDEALER_________________________\n\n");
-	deal(deck, player1, &start, &finish); 
-	printArray(player1, face, suit, 1);
-	//printf("\nDEALER_sort\n\n");
+      //сдать карты первому игроку
+      printf("\nDEALER_________________________\n\n");
+      deal(deck, player1, &start, &finish); 
+      printArray(player1, face, suit, 1);
+      //printf("\nDEALER_sort\n\n");
 	
 	//сортировка массива карт дилера
 	sort(player1);
