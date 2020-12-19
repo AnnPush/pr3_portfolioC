@@ -110,14 +110,14 @@ int main(void)
 	p2 = fPriority(player2,  &nominal2);
 	printf("\nPriority_2 = %u\n\n", p2);
 	
-			printf("\nPLAYER_sort_new\n\n");
-			//выпавшие комбинации карт передвинуть в конец массива
-	sortTakeCards(player2, &p2, &finish, &nominal2);
-	printArray(player2, face, suit, 0);
+			
 	//сколько карт желает взять игрок
 	printf("\nHow many cards do you want to take?\n\n");
 	scanf("%u", &finish);
-	
+	printf("\nPLAYER_sort_new\n\n");
+			//выпавшие комбинации карт передвинуть в конец массива
+	sortTakeCards(player2, &p2, &finish, &nominal2);
+	printArray(player2, face, suit, 0);
 	if(finish != 0)
 	{
 		//выдать новые карты игроку
